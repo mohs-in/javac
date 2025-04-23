@@ -16,7 +16,7 @@ public class FindingPairs {
                 }
             }
         }
-        if(found)
+        if(!found)
             System.out.println("No pairs found for the given sum.");
     }
 
@@ -34,7 +34,7 @@ public class FindingPairs {
                 j--;
             } else i++;
         }
-        if(found)
+        if(!found)
             System.out.println("No pairs found for the given sum.");
     }
 }

@@ -1,15 +1,21 @@
 package org.example;
 
-import java.util.Arrays;
+import org.game.Game;
+
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList obj = new ArrayList();
-        java.util.ArrayList<Integer> result = obj.arrayList();
+        Scanner scanner = new Scanner(System.in);
 
-        for(Integer num: result) {
-            System.out.println(num);
-        }
+        System.out.println("Enter the names of the 3 players: ");
+        String p1 = scanner.nextLine();
+        String p2 = scanner.nextLine();
+        String p3 = scanner.nextLine();
+
+        org.game.Game obj = new Game(p1, p2, p3);
+
+        obj.start();
     }
 }

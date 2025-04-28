@@ -13,7 +13,7 @@ public class Game {
 
     private boolean checkGuess(Player p, int round) {
         if(p.getGuess() == expectedGuess) {
-            System.out.println(p.name + " has won in round "+ round);
+            System.out.println(p.name + " has won in round "+ (round-1));
             return true;
         }
         return false;
@@ -36,7 +36,7 @@ public class Game {
         int round = 1;
         while(!guessResult) {
             System.out.println();
-            System.out.println("Round: " + round);round++;
+            System.out.println("Round: " + round); round++;
             makeAllGuesses();
             checkAllGuesses(round);
         }

@@ -57,7 +57,31 @@ public class Maths {
             }
         }
         return result;
-
     }
 
+    public int sumOfDivisors(int num) {
+        int sum = 0;
+
+        for(int i = 1; i*i <= num; i++) {
+            if(num%i == 0) {
+                if(i*i == num) {
+                    sum += i;
+                } else {
+                    sum += i + num/i;
+                }
+            }
+        }
+        return sum;
+    }
+
+    public void infiniteGPSum() {
+        float a = 2f, r = 0.5f, sum = 0f;
+
+        while(a != 0) {
+            sum += a;
+            a *= r;
+        }
+
+        System.out.println(sum);
+    }
 }
